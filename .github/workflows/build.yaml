@@ -23,10 +23,10 @@ jobs:
           cache: "npm"
       - run: npm i
       - run: npm run build
-      - run: cd / 
-      - run: cp -r /home/ubuntu/actions-runner/work/react-app-demo/react-app-demo/build/ /home/ubuntu/react-app-demo/
-      - run: cd /home/ubuntu/react-app-demo
-      - run: git checkout -b master
-      - run: git add .
-      - run: git commit -m "changes in readme:`date +'%Y-%m-%d %H:%M:%S'`"
-      - run: git push origin master
+      - run: |
+          cd / 
+          cp -r /home/ubuntu/actions-runner/work/react-app-demo/react-app-demo/build/ /home/ubuntu/react-app-demo/
+          cd /home/ubuntu/react-app-demo
+          git add .
+          git commit -m "Build:`date +'%Y-%m-%d %H:%M:%S'`"
+          git push
