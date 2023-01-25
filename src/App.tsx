@@ -7,7 +7,6 @@ function App() {
   return (
     <TodoContextProvider>
       <NewTodo />
-      <h1>New Todos</h1>
       <Todos />
     </TodoContextProvider>
   );
