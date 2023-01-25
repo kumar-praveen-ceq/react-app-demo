@@ -23,12 +23,10 @@ jobs:
           cache: "npm"
       - run: npm i
       - run: npm run build
-      - name: copy file react-app-demo folder
-        run: cd / 
-        run: cp -r /home/ubuntu/actions-runner/work/react-app-demo/react-app-demo/build/ /home/ubuntu/react-app-demo/
-      - name: Change directory to react-app-demo
-        run: cd /home/ubuntu/react-app-demo
-        run: git checkout -b master
-        run: git add .
-        run: git commit -m "changes in readme:`date +'%Y-%m-%d %H:%M:%S'`"
-        run: git push origin master
+      - run: cd / 
+      - run: cp -r /home/ubuntu/actions-runner/work/react-app-demo/react-app-demo/build/ /home/ubuntu/react-app-demo/
+      - run: cd /home/ubuntu/react-app-demo
+      - run: git checkout -b master
+      - run: git add .
+      - run: git commit -m "changes in readme:`date +'%Y-%m-%d %H:%M:%S'`"
+      - run: git push origin master
