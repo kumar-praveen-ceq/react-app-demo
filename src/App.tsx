@@ -7,7 +7,7 @@ function App() {
   return (
     <TodoContextProvider>
       <NewTodo />
-      <h1>Hello world</h1>
+      <h1>New Todos</h1>
       <Todos />
     </TodoContextProvider>
   );

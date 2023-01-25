@@ -21,7 +21,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-          key: ${{ secrets.SSH_KEY }}
       - run: npm i
       - run: npm run build
       - run: |
