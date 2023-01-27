@@ -32,7 +32,6 @@ jobs:
           git add .
           git commit -m "Build:`date +'%Y-%m-%d %H:%M:%S'`"
           git remote add origin git@github.com:praveen-kumar-ceq/react-app-demo.git
-          git pull --rebase
           git push origin master
           cd ..
           rm -rf react-demo-app
