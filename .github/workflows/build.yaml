@@ -27,7 +27,7 @@ jobs:
           cd /home/ubuntu
           mkdir react-demo-app 
           cp -r /home/ubuntu/actions-runner/work/react-app-demo/react-app-demo/build/* /home/ubuntu/react-demo-app/
-          cd /home/ubuntu/react-app-demo
+          cd react-demo-app
           git init
           git checkout -b master
           git add .
