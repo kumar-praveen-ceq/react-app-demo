@@ -32,6 +32,7 @@ jobs:
           git add .
           git commit -m "Build:`date +'%Y-%m-%d %H:%M:%S'`"
           git remote add origin git@github.com:praveen-kumar-ceq/react-app-demo.git
+          git branch --set-upstream-to=origin/master
           git pull --rebase
           git push -u origin master
           cd ..
