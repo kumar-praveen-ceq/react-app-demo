@@ -25,13 +25,10 @@ jobs:
       - run: npm run build
       - run: |
           cd /home/ubuntu
-          mkdir react-demo-app 
           cp -r /home/ubuntu/actions-runner/work/react-app-demo/react-app-demo/build/* /home/ubuntu/react-demo-app/
           cd react-demo-app
-          git init
           git add .
           git commit -m "Build:`date +'%Y-%m-%d %H:%M:%S'`"
-          git remote add origin git@github.com:praveen-kumar-ceq/react-app-demo.git
-          git push origin master
-          cd ..
-          rm -rf react-demo-app
+          git pull --rebase
+          git push
+          echo All task done

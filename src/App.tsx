@@ -6,7 +6,6 @@ import { TodoContextProvider } from "./store/todos-context";
 function App() {
   return (
     <TodoContextProvider>
-      <h1>Hello World!</h1>
       <NewTodo />
       <Todos />
     </TodoContextProvider>
