@@ -21,9 +21,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - uses: actions/labeler@v2
-        with:
-          repo-token: ${{ secrets.ACCESS_TOKEN }}
       - run: npm i
       - run: npm run build
       - run: |
