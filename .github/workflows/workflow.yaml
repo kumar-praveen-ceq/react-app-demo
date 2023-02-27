@@ -36,7 +36,6 @@ jobs:
           git add .
           git commit -m "Build:`date +'%Y-%m-%d %H:%M:%S'`"
           git remote add origin https://${{ secrets.ACCESS_TOKEN }}@github.com/praveen-kumar-ceq/react-app-demo.git
-          git branch --set-upstream-to=origin/azure-web-app azure-web-app
           git pull --rebase
-          git push origin azure-web-app
+          git push -u origin azure-web-app
           echo All task done
