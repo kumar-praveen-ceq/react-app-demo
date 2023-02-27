@@ -35,7 +35,7 @@ jobs:
           git checkout -b azure-web-app
           git add .
           git commit -m "Build:`date +'%Y-%m-%d %H:%M:%S'`"
-          git add remote origin https://${{ secrets.ACCESS_TOKEN }}@github.com/praveen-kumar-ceq/react-app-demo.git
+          git remote add origin https://${{ secrets.ACCESS_TOKEN }}@github.com/praveen-kumar-ceq/react-app-demo.git
           git pull --rebase
           git push
           echo All task done
