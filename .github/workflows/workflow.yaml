@@ -15,9 +15,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/labeler@v4
-        with:
-          repo-token: ${{ secrets.ACCESS_TOKEN }}
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -31,12 +29,10 @@ jobs:
           mkdir react-demo-app
           cp -r /home/runner/work/react-app-demo/react-app-demo/build/* /home/runner/react-demo-app/
           cd react-demo-app
-          git config --global user.email "praveenkumar.s@cloudeq.com"
-          git config --global user.name "praveen-kumar-ceq"
           git init
           git checkout -b azure-web-app
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           git add .
-          git commit -m "Build:`date +'%Y-%m-%d %H:%M:%S'`"
-          git remote add origin https://${{ secrets.ACCESS_TOKEN }}@github.com/praveen-kumar-ceq/react-app-demo.git
-          git push -u origin azure-web-app
-          echo All task done
+          git commit -m "generated"
+          git push origin azure-web-app
