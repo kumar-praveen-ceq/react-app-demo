@@ -25,6 +25,7 @@ jobs:
       - run: npm run build
       - run: |
           cd /home/ubuntu
+          mkdir react-demo-app
           cp -r /home/ubuntu/actions-runner/_work/react-app-demo/react-app-demo/build/* /home/ubuntu/react-demo-app/
           cd react-demo-app
           git init
