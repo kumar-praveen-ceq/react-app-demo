@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -37,5 +37,5 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m "generated"
-          git remote add origin https://${{ secrets.ACCESS_TOKEN }}@github.com/USERNAME/REPO_NAME.git
+          git remote add origin https://x-access-token:$GH_TOKEN@github.com/USERNAME/REPO_NAME.git
           git push --set-upstream origin azure-web-app
