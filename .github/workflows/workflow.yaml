@@ -33,8 +33,8 @@ jobs:
           cd react-demo-app
           git init
           git checkout -b azure-web-app
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config --global user.name "praveen-kumar-ceq"
+          git config --global user.email "praveenkumar.s@cloudeq.com"
           git add .
           git commit -m "generated"
           git remote add origin https://x-access-token:$token@github.com/praveen-kumar-ceq/react-app-demo.git
