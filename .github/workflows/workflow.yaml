@@ -29,6 +29,8 @@ jobs:
           mkdir react-demo-app
           cp -r /home/runner/work/react-app-demo/react-app-demo/build/* /home/runner/react-demo-app/
           cd react-demo-app
+          git config --global user.email "praveenkumar.s@cloudeq.com"
+          git config --global user.name "praveen-kumar-ceq"
           git init
           git checkout -b azure-web-app
           git add .
