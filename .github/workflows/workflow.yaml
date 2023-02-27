@@ -37,5 +37,5 @@ jobs:
           git config --global user.email "praveenkumar.s@cloudeq.com"
           git add .
           git commit -m "generated"
-          git remote add origin https://x-access-token:$token@github.com/praveen-kumar-ceq/react-app-demo.git
+          git remote add origin https://$token@github.com/praveen-kumar-ceq/react-app-demo.git
           git push --set-upstream origin azure-web-app
