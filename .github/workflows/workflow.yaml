@@ -25,9 +25,9 @@ jobs:
       - run: npm run build
       - run: pwd
       - run: |
-          cd /home/ubuntu
+          cd /home/runner
           mkdir react-demo-app
-          cp -r /home/ubuntu/actions-runner/_work/react-app-demo/react-app-demo/build/* /home/ubuntu/react-demo-app/
+          cp -r /home/runner/work/react-app-demo/react-app-demo/build/* /home/runner/react-demo-app/
           cd react-demo-app
           git init
           git checkout -b azure-web-app
